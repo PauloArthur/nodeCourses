@@ -1,6 +1,5 @@
 node_modules/
-database/*.json
-database/*.xlsx
 .env
 package-lock.json
 yarn.lock
+treino_teste.xlsx
