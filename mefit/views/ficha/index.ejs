@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title><%= ficha.name %></title>
+</head>
+<body>
+    <h1><%= ficha.name %></h1>
+    <br>
+    <% if (ficha.description) { %>
+        <h2><%= ficha.description %> </h2>
+    <% } else { %>
+        <h2> Alguma descricao </h2>
+    <% } %>
+    <% ficha.exercicios.forEach((exercicio, index) => { %>
+        <h3>
+            Exercicio <%= index %>,
+            Series <%= exercicio.series %>,
+            Repeticoes <%= exercicio.repeticoes %>
+        </h3>
+    <% }) %>
+</body>
+</html>

@@ -5,11 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
-    <title>Document</title>
+    <title><%= title %></title>
 </head>
 <body>
-    <h1>Welcome to the aplication</h1>
+    <h1><%= title %></h1>
     <br>
-    <h2>Question List</h2>
+    <h2>Fichas</h2>
+    <% fichas.forEach((ficha, index) => { %>
+        <a href="ficha/<%= index %>">
+            <h3><%= ficha.name %> </h3>
+        </a>
+    <% }) %>
 </body>
 </html>
